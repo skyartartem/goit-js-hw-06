@@ -22,3 +22,42 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.item {
+  display: inline-block;
+  width: 100%;
+
+  /* border: 5px solid red; */
+}
+@media screen and (min-width: 720px){
+ .item{
+  width: calc( ( 100% - 10px ) / 2 );
+  } 
+}
+@media screen and (min-width: 1200px){
+ .item{
+  width: calc( ( 100% - 20px ) / 3 );
+  } 
+}
