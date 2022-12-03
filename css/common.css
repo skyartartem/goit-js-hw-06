@@ -23,7 +23,7 @@ button {
   cursor: pointer;
 }
 
-img {
+.gallery img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -45,19 +45,19 @@ img {
 
 
 
-.item {
+.gallery.item {
   display: inline-block;
   width: 100%;
 
   /* border: 5px solid red; */
 }
 @media screen and (min-width: 720px){
- .item{
+ .gallery .item{
   width: calc( ( 100% - 10px ) / 2 );
   } 
 }
 @media screen and (min-width: 1200px){
- .item{
+ .gallery .item{
   width: calc( ( 100% - 20px ) / 3 );
   } 
 }
