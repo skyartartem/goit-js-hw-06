@@ -1,12 +1,15 @@
-const inputFontSizeControl = document.getElementById("font-size-control");
-const spanEl = document.getElementById("text")
-inputFontSizeControl.addEventListener("input", resizeFont);
+document
+  .getElementById("font-size-control")
+  .addEventListener("input", handlerValueSize);
 
-// console.dir(spanEl)
+// document.getElementById("text").style.fontSize =
+//   document.getElementById("font-size-control").value + "px";
 
-function resizeFont(event) {
-    spanEl.style.fontSize = `${event.currentTarget.value}px`;
-    // console.log(event.currentTarget.value);
-    // console.log(this.value);
-    
+function handlerValueSize(event) {
+  const defTextSize = 16;
+  const midlRange = 56;
+  const coef = defTextSize / midlRange;
+  const size = coef * event.currentTarget.value;
+
+  document.getElementById("text").style.fontSize = `${size}px`;
 }

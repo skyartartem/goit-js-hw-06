@@ -6,15 +6,12 @@ const buttonRef = document.querySelector(".change-color");
 const spanRef = document.querySelector(".color");
 const bodyRef = document.querySelector("body");
 
-// console.log(spanRef);
-
 buttonRef.addEventListener("click", changeColor);
 
-
 function changeColor(event) {
-  const randomeHex = getRandomHexColor();
-  // console.log(randomeHex);
-  // console.log(spanRef.textContent);
-  spanRef.textContent = randomeHex;
-  bodyRef.style.backgroundColor = `${randomeHex}`;
+  spanRef.textContent = bodyRef.style.backgroundColor = getRandomHexColor();
+  // або:
+  // const randomeHex = getRandomHexColor();
+  // spanRef.textContent = randomeHex;
+  // bodyRef.style.backgroundColor = `${randomeHex}`;
 }

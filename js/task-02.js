@@ -16,8 +16,6 @@ ingredients.forEach((ingredient) => {
   list.push(li);
 });
 
-// console.log(list);
-
 const ulIngredients = document.getElementById("ingredients");
 
 ulIngredients.append(...list)

@@ -2,7 +2,9 @@ const inputEl = document.getElementById("validation-input");
 inputEl.addEventListener("blur", changeBorderColor);
 
 function changeBorderColor(event) {
-    if (this.value.length === 6) {
+    const l = inputEl.getAttribute("data-length");
+    
+    if (this.value.length === Number(l)) {
         if (this.classList.contains("invalid")) {
             this.classList.remove("invalid");
         } this.classList.add("valid");
