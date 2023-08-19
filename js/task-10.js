@@ -27,7 +27,7 @@ function createBoxes(amount) {
 }
 
 const makeMarkup = (number) => {
-  const width = 30 + number * 10;
+  const width = 30 + number * 20;
   return `
   <div style="background-color:${getRandomHexColor()};
   height: ${width}px;
